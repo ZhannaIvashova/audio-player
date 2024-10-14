@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/normalize.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>AudioPlayer</title>
+</head>
+<body>
+  <main class="main">
+    <div class="player">
+      <img class="player__img" alt="poster">
+      <div class="player__panel">
+        <div class="player__panel-text">
+          <span class="singer"></span>
+          <span class="song"></span>
+        </div>
+        <div class="player__panel-control">
+          <button class="prev control-rewind control-btn">
+            <i class="fas fa-backward"></i>  
+          </button>
+          <button class="play control control-btn" data-state="paused">
+            <i id="play-control" class="fas fa-play"></i>
+          </button>
+          <button class="next control-rewind control-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+        <div class="player__panel-timeline">
+          <input type="range" class="progress-bar" min="0" max="100" value="0">
+        </div>
+        <div class="player__panel-time">
+          <div class="current">0:00</div>
+          <div class="length"></div>
+        </div>
+      </div>
+    </div>
+    <audio id="audio-player" class="hidden" controls></audio>
+  </main>
+  <footer>
+    <div class="footer-wrap">
+      <a class="footer__github-link" href="https://github.com/ZhannaIvashova" target="_blank">
+        <img class="footer__github-logo" src="./assets/images/github-logo.svg" alt="github-logo">
+        <span>My GitHub</span>
+      </a>
+      <p>&copy; 2024</p>
+      <a class="footer__rsschool-link" href="https://rs.school/courses/javascript-preschool-ru" target="_blank">
+        <img class="footer__rsschool-logo"  src="./assets/images/rss-logo.svg" alt="rss-logo">
+      </a>
+    </div>
+  </footer>
+  
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
